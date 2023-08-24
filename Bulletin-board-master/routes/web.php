@@ -11,6 +11,7 @@
 |
 */
 
+//初
 Route::get('/', function () {
     return view('welcome');
 });

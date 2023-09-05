@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+/*↓共通パーツ↓*/
+
+html {
+  /*全体のフォントサイズ*/
+  font-size: 16px;
+}
+
+/*ページの基本設定*/
+body {
+  color: #000000;
+  font-size: 1rem;
+  font-family: "YuGothic",
+    Yu Gothic,
+    sans-serif;
+  max-width: 100%;
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+
+/* リンク文字の設定 */
+a {
+  text-decoration: none;
+  transition: 0.6s;
+  color: #51a9f2;
+}
+
+a:hover {
+  transition: 0.6s;
+}
+
+/* ボタンの設定 */
+.login-btn,
+.register-btn {
+  margin-top: 10px;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 40px;
+  width: 100px;
+  background-color: #51a9f2;
+  color: #FFF;
+  opacity: 0.8;
+  border-color: #51a9f2;
+}
+
+/* バリデーションのエラーメッセージ */
+.error_message {
+  color: red;
+  font-size: 0.8rem;
+}
+
+/*↑共通パーツ↑*/
+
+
+/*↓ログインページ 新規登録ページ 共有パーツ↓*/
+
+/* メール、パスワードフォームをまとめる */
+.login-box,
+.register-box {
+  margin-top: 3rem;
+}
+
+/* メールラベル・フォーム */
+/* パスワードラベル・フォーム */
+.login-mail-box,
+.login-pass-box,
+.register-username-box,
+.register-mail-box,
+.register-password-box,
+.register-password-box,
+.register-confirmation-box {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* メールラベル */
+/* パスワードラベル */
+.login-mail-lavel,
+.login-password-lavel,
+.register-username-lavel,
+.register-mail-lavel,
+.register-password-lavel,
+.register-confirmation-lavel {
+  text-align: left;
+}
+
+/* メールフォーム */
+/* パスワードフォーム */
+.login-mail-form,
+.login-password-form,
+.register-username-form,
+.register-mail-form,
+.register-password-form,
+.register-confirmation-form {
+  width: 300px;
+  border: 1px solid #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+
+.login-btn-form {
+  margin-left: 12rem;
+}
+
+.login-to-register {
+  margin-top: 20px;
+}
+
+
+/*↑ログインページ 新規登録ページ 共有パーツ↑*/
+
+
+/*↓ログインページ login.blade↓*/
+.login-container {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10rem;
+  position: relative;
+  display: block;
+  text-align: center;
+  border-top: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+/*↑ログインページ login.blade↑*/
+
+
+/*↓新規登録ページ register.blade↓*/
+.register-container {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  position: relative;
+  display: block;
+  text-align: center;
+  border-top: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+/*↑新規登録ページ register.blade↑*/

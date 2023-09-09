@@ -26,12 +26,16 @@ class LoginController extends Controller
     //ログインしてトップ画面へ推移
     public function loginTop(Request $request)
     {
-         $userdata = $request -> only('email', 'password');
-        if (Auth::attempt($userdata)) {
+        // postメソッドへ送る
+        if ($request->isMethod('post')) {
+           $userdata = $request -> only('email', 'password');
+          if (Auth::attempt($userdata)) {
+            // ログイン認証ができたら/topページへ推移
             return redirect('/top');
-        }else{
-            return view("auth.login");
+          }
         }
+            // 認証できなかったらログイン画面に止まる
+            return view("auth.login");
     }
 
 }

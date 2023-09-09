@@ -2,8 +2,9 @@
 
 @section('content')
 
+<!-- 渡したいログイン情報をFormで囲う、トップページのURLを指定 -->
+{!! Form::open(['url' => '/login/top']) !!}
 
-{!! Form::open(['url' => '/login' ]) !!}
 
 <div class="login-container">
     <h1>ログイン</h1>
@@ -28,7 +29,8 @@
 
          <!-- ログインボタン -->
          <div class="login-btn-form" >
-             <p><b><a href="{{ route('top') }}">ログイン</a></b></p>
+             <!-- ログイン認証するための情報を送る -->
+            <p><b> {{Form::submit('ログイン',['class' => 'button']) }}</b></p>
          </div>
     </div>
 

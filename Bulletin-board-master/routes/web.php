@@ -12,12 +12,12 @@
 */
 
 //あらかじめあった記述
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/hello', function(){
-    echo 'Hello World !';
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('/hello', function(){
+//     echo 'Hello World !';
+// });
 // Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');//Laravelの最初
 
@@ -56,6 +56,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::namespace('Top')->group(function(){
         //トップページを表示
          Route::get('/top', 'TopController@top')->name('top');
+         //ログアウト機能
+        Route::get('/logout', 'TopController@logout')->name('logout');
     });
     });
     });

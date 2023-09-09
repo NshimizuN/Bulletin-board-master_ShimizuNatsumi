@@ -18,7 +18,15 @@ class TopController extends Controller
     //ログインしてトップ画面へ推移
         public function top()
     {
-        return view('authenticated.top');
+        return view('authenticated.top.top');
+    }
+
+    /*ログアウト機能*/
+    public function logout()
+    {
+        Auth::logout();
+        // ログインページへ戻る
+        return redirect('/login');
     }
 
 }

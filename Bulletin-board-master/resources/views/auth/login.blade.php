@@ -14,6 +14,12 @@
         <!-- メールアドレス -->
             <div class="login-mail-box">
              <b>{{Form::label('email','メールアドレス',['class' =>'login-mail-lavel'])}}</b>
+              <!-- バリデーションメッセージ -->
+              <div class="error_message">
+                 @error('email')
+                  <span>{{ $message }}</span>
+                  @enderror
+              </div>
               <div class="border-bottom border-primary w-100">
                  {{Form::email('email', null, ['class' => 'login-mail-form'])}}
              </div>
@@ -22,6 +28,11 @@
           <!-- パスワード -->
           <div class="login-pass-box">
                <b>{{Form::label('password','パスワード',['class' =>'login-password-lavel'])}}</b>
+              <div class="error_message">
+                  @error('password')
+                  <span>{{ $message }}</span>
+                  @enderror
+              </div>
                <div class="border-bottom border-primary w-100">
                     {{Form::password('password', ['class' => 'login-password-form'])}}
               </div>
@@ -30,7 +41,7 @@
          <!-- ログインボタン -->
          <div class="login-btn-form" >
              <!-- ログイン認証するための情報を送る -->
-            <p><b> {{Form::submit('ログイン',['class' => 'button']) }}</b></p>
+            <p><b> {{Form::submit('ログイン',['class' => 'login-btn']) }}</b></p>
          </div>
     </div>
 

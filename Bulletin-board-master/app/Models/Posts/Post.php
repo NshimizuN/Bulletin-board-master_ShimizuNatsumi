@@ -17,4 +17,9 @@ class Post extends Model
         'post',
         'event_at',
     ];
+
+    //サプカテゴリーモデルとリレーション
+    public function postSubCategories(){
+        return $this->belongsTo('App\Models\Categories\SubCategory');
+    }
 }

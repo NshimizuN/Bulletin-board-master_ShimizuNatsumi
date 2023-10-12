@@ -19,7 +19,7 @@
 //     echo 'Hello World !';
 // });
 // Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');//Laravelの最初
+// Route::get('/home', 'HomeController@index')->name('home');//Laravelの最初
 
 
 
@@ -59,5 +59,22 @@ Route::group(['middleware' => 'auth'], function () {
          //ログアウト機能
         Route::get('/logout', 'TopController@logout')->name('logout');
     });
+     Route::namespace('Category')->group(function(){
+        //カテゴリーページを表示
+         Route::get('/category', 'CategoryController@category')->name('category');
+        //メインカテゴリーに単語を追加
+         Route::post('/create/main_category', 'CategoryController@mainCategoryCreate')->name('main.category.create');
+        //メインカテゴリーの単語を削除
+         Route::post('/delete/main_category', 'CategoryController@mainCategoryDelete')->name('main.category.delete');
+         //サブカテゴリーに単語を追加
+         Route::post('/create/sub_category', 'CategoryController@subCategoryCreate')->name('sub.category.create');
+         //サブカテゴリーの単語を削除
+         Route::post('/delete/sub_category', 'CategoryController@subCategoryDelete')->name('sub.category.delete');
+         });
+     Route::namespace('Post')->group(function(){
+        //新規投稿ページを表示
+         Route::get('/post', 'PostsController@post')->name('post');
+         });
+
     });
     });

@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Auth\Login;
 
 use App\Http\Controllers\Controller;
+//リクエストフォームの使用を可能にする
+use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\LoginRequest;
+
 use Illuminate\Http\Request;
 use App\Models\Users\User;
 use Illuminate\Support\Facades\DB;
@@ -24,7 +28,7 @@ class LoginController extends Controller
     }
 
     //ログインしてトップ画面へ推移
-    public function loginTop(Request $request)
+    public function loginTop(LoginRequest $request)
     {
         // postメソッドへ送る
         if ($request->isMethod('post')) {

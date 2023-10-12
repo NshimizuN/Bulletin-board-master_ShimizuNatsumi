@@ -21,9 +21,10 @@ class TopController extends Controller
         return view('authenticated.top.top');
     }
 
-    /*ログアウト機能*/
+    // ログアウト機能
     public function logout()
     {
+        dd("123");
         Auth::logout();
         // ログインページへ戻る
         return redirect('/login');

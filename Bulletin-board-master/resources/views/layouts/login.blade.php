@@ -24,9 +24,6 @@
 <body>
   <section>
     <div class="container">
-      <header>
-
-      </header>
 
       @yield('content')
 

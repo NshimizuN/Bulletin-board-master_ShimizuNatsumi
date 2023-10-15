@@ -1,10 +1,8 @@
 @extends('layouts.logout')
-
 @section('content')
 
 <!-- 渡したいログイン情報をFormで囲う、トップページのURLを指定 -->
 {!! Form::open(['url' => '/login/top']) !!}
-
 
 <div class="login-container">
     <h1>ログイン</h1>
@@ -53,5 +51,4 @@
 </div>
 
 {!! Form::close() !!}
-
 @endsection

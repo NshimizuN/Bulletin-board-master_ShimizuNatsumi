@@ -5,12 +5,18 @@
      @csrf
   <header>
     <h1>新規投稿画面</h1>
-    <!-- ログアウトボタン -->
-    <form action="{{ route('logout') }}" method="get">
-        @csrf
-        <input class="logout-btn" type="submit" value="ログアウト">
-    </form>
+    <!-- ログアウトボタン　 -->
+       <p class="logout-btn"><a href="/logout"><i class="fas fa-external-link-alt"></i>ログアウト</a></p>
   </header>
+
+  <div class = "category-container">
+
+  <!-- サブカテゴリー -->
+
+  <!-- タイトル -->
+  <!-- 投稿内容 -->
+  <!-- 送信ボタン -->
+  </div>
 
 </form>
 @endsection

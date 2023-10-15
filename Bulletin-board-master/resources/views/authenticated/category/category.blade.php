@@ -5,11 +5,8 @@
      @csrf
   <header>
     <h1>カテゴリー追加画面</h1>
-    <!-- ログアウトボタン -->
-    <form action="{{ route('logout') }}" method="get">
-        @csrf
-        <input class="logout-btn" type="submit" value="ログアウト">
-    </form>
+    <!-- ログアウトボタン　 -->
+       <p class="logout-btn"><a href="/logout"><i class="fas fa-external-link-alt"></i>ログアウト</a></p>
   </header>
 
    <div class ="category-container">
@@ -60,6 +57,7 @@
 
            @foreach($sub_categories as $sub_category)
           @if($main_category->id == $sub_category->post_main_category_id)
+         <div>
           <span>{{ $sub_category->sub_category }}</span>
           <!-- 削除ボタン -->
           <!-- 削除メソッドをフォームタグで受け取る↓ -->
@@ -72,6 +70,7 @@
           <!-- 削除を確定させるボタン -->
           <button type="submit" class="category_delete-button">削除</button>
         </form>
+    </div>
           @endif
           @endforeach
 

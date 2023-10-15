@@ -6,11 +6,8 @@
   <header>
     <h1>{{ Auth::user()->username }}さん</h1>
     <h1>投稿一覧画面</h1>
-    <!-- ログアウトボタンをフォームタグで囲みログアウトルーティングを通す -->
-    <form action="{{ route('logout') }}" method="get">
-        @csrf
-        <input class="logout-btn" type="submit" value="ログアウト">
-    </form>
+    <!-- ログアウトボタン　 -->
+       <p class="logout-btn"><a href="/logout"><i class="fas fa-external-link-alt"></i>ログアウト</a></p>
   </header>
 
   <div class ="top-container">

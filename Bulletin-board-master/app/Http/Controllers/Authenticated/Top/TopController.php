@@ -24,7 +24,7 @@ class TopController extends Controller
     // ログアウト機能
     public function logout()
     {
-        dd("123");
+        // dd("123");
         Auth::logout();
         // ログインページへ戻る
         return redirect('/login');
